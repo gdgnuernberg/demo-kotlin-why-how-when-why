@@ -1,13 +1,17 @@
 package kotlinwhyhowwhenwhy
 
-import kotlinwhyhowwhenwhy.overloading.OverloadedMethodsInJava
+import kotlinwhyhowwhenwhy.classes.CustomerKotlin
 import kotlinwhyhowwhenwhy.overloading.printMessage
 
 fun main() {
-    printMessage("Message")
-    printMessage("Message", "Great")
-    printMessage("Message", "Great", "!")
-    printMessage(prefix = "Great", suffix = "!", message = "Message")
+    val customerKotlin = CustomerKotlin(
+        1,
+        "Morton Cornelius",
+        "mortoncornelius@gmail.com")
 
-    OverloadedMethodsInJava().printMessage("From Kotlin")
+    printMessage(
+        customerKotlin.name ?: "",
+        customerKotlin.id.toString(),
+        customerKotlin.email ?: ""
+    )
 }

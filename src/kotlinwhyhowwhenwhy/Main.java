@@ -1,15 +1,17 @@
 package kotlinwhyhowwhenwhy;
 
-import kotlinwhyhowwhenwhy.overloading.OverloadedMethodsInJava;
+import kotlinwhyhowwhenwhy.classes.CustomerJava;
 import kotlinwhyhowwhenwhy.overloading.OverloadedMethodsInKotlinKt;
 
 public class Main {
     public static void main(String[] args) {
-        OverloadedMethodsInJava overloadedMethodsInJava = new OverloadedMethodsInJava();
-        overloadedMethodsInJava.printMessage("Message");
-        overloadedMethodsInJava.printMessage("Message", "Great");
-        overloadedMethodsInJava.printMessage("Message", "Great", "!");
+        CustomerJava customerJava = new CustomerJava(1);
+        customerJava.setName("Morton Cornelius");
+        customerJava.setEmail("mortoncornelius@gmail.com");
 
-        OverloadedMethodsInKotlinKt.printMessage("greetings", "Hey there,", "from Kotlin");
+        OverloadedMethodsInKotlinKt.printMessage(
+                customerJava.getName(),
+                String.valueOf(customerJava.getId()),
+                customerJava.getEmail());
     }
 }
