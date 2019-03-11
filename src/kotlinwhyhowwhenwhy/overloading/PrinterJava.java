@@ -1,6 +1,8 @@
 package kotlinwhyhowwhenwhy.overloading;
 
-public class OverloadedMethodsInJava {
+public enum PrinterJava {
+    INSTANCE;
+
     public void printMessage(String message) {
         printMessage(message, "");
     }
