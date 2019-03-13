@@ -1,3 +1,5 @@
+@file:JvmName("CustomKotlinUtils")
+
 package kotlinwhyhowwhenwhy.extensions
 
 import kotlinwhyhowwhenwhy.classes.CustomerKotlin

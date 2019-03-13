@@ -1,6 +1,7 @@
 package kotlinwhyhowwhenwhy.higherorder
 
 object HigherOrderFunctions {
+    @JvmStatic
     fun triggerWorkInBackground(onFinishAction: (result: String) -> Unit) {
         Thread.sleep(3000)
         val isValid = listOf(true, false).random()

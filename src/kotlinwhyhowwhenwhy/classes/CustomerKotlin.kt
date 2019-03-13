@@ -1,8 +1,8 @@
 package kotlinwhyhowwhenwhy.classes
 
 // Kotlin has only properties - no fields
-data class CustomerKotlin(
+data class CustomerKotlin @JvmOverloads constructor(
     val id: Int,
-    var name: String? = null,
+    @JvmField var name: String? = null,
     var email: String? = null
 )
